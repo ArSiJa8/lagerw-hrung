@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Punkte-System</title>
+</head>
+<body>
+  <h1>Willkommen zum Punkte-System</h1>
+
+  <div id="auth">
+    <input type="email" id="email" placeholder="E-Mail" />
+    <input type="password" id="password" placeholder="Passwort" />
+    <button onclick="signIn()">Einloggen</button>
+    <button onclick="signUp()">Registrieren</button>
+    <p id="auth-status"></p>
+  </div>
+
+  <div id="user-info" style="display:none;">
+    <p>Hallo, <span id="username"></span>!</p>
+    <p>Deine Punkte: <span id="points">0</span></p>
+
+    <h3>Punkte senden</h3>
+    <input type="text" id="receiver" placeholder="Empfänger-Username" />
+    <input type="number" id="amount" placeholder="Punkte" />
+    <button onclick="sendPoints()">Senden</button>
+
+    <button onclick="signOut()">Ausloggen</button>
+
+    <p id="message"></p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="main.js"></script>
+</body>
+</html>
 
